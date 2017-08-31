@@ -20,6 +20,9 @@ class Casa
         puerta = new Square();
     }
     
+    /**
+     * Dibuja las figuras.
+     */
     void dibujate()
     {
         pared.makeVisible();
@@ -29,6 +32,7 @@ class Casa
     }
     
     /**
+     * En un principio da color y asigna tamaño a las figuras.
      * @param valorX Pide el valor de la coordenda en horizontal.
      * @param valorY Pide el valor de la coordenda en vertical.
      */
@@ -47,11 +51,11 @@ class Casa
         
         pared.moveHorizontal(valorX);
         pared.moveVertical(valorY);
-        puerta.moveHorizontal(valorX+10);
-        puerta.moveVertical(valorY+30);
-        techo.moveHorizontal(valorX+35);
-        techo.moveVertical(valorY-5);
-        ventana.moveHorizontal(valorX+55);
-        ventana.moveVertical(valorY-35);
+        puerta.moveHorizontal(valorX + 10);
+        puerta.moveVertical(valorY + 30);
+        techo.moveHorizontal(valorX + 35);
+        techo.moveVertical(valorY - 5);
+        ventana.moveHorizontal(valorX + 55);
+        ventana.moveVertical(valorY - 35);
     }
 }
