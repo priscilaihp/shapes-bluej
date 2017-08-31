@@ -5,8 +5,13 @@ class Casa
     Triangle techo;
     Square pared;
     Square puerta;
+    int x;
+    int y;
     
-    // Constructor
+    /**
+     * Constructor
+     * @author Priscila Hernandez
+     */
     Casa()
     {
         ventana = new Circle();
@@ -23,9 +28,12 @@ class Casa
         ventana.makeVisible();
     }
     
-    void acomodate()
+    /**
+     * @param valorX Pide el valor de la coordenda en horizontal.
+     * @param valorY Pide el valor de la coordenda en vertical.
+     */
+    void acomodate(int valorX, int valorY)
     {
-        // Que les corresponde
         pared.changeColor("green");
         pared.changeSize(50);
         puerta.changeColor("blue");
@@ -35,16 +43,15 @@ class Casa
         ventana.changeColor("black");
         ventana.changeSize(20);
         
-       
-        puerta.moveDown();
-        puerta.moveVertical(10);
-        puerta.moveHorizontal(8);
-        techo.moveRight();
-        techo.moveVertical(-5);
-        techo.moveHorizontal(14);
-        ventana.moveVertical(-35);
-        ventana.moveHorizontal(54);
-        // Coloca los objetos en la posicion
         
+        
+        pared.moveHorizontal(valorX);
+        pared.moveVertical(valorY);
+        puerta.moveHorizontal(valorX+10);
+        puerta.moveVertical(valorY+30);
+        techo.moveHorizontal(valorX+35);
+        techo.moveVertical(valorY-5);
+        ventana.moveHorizontal(valorX+55);
+        ventana.moveVertical(valorY-35);
     }
 }
